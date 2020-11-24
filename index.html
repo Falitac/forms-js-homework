@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet"/>
+    <title>MathCenter</title>
+</head>
+<body>
+	<h1 id="logo">MathCenter</h1>
+    <div id="register" class="centered">
+    <form id="register-form" action="" method="post">
+        <h3>Formularz rejestracyjny forum MathCenter</h3>
+        <label>
+        	Login:
+        	<input name="login" size="20" maxlength="14" />
+        	<input name="generate" type="button" value="Wygeneruj login" onclick="return generateLogin();"/>
+        </label>
+        <label>
+        	Hasło:
+        	<input name="password" type="password" size="20" maxlength="100"/>
+        </label>
+        <label>
+        	Powtórz hasło:
+        	<input name="passwordCheck" type="password" size="20" maxlength="100"/>
+        </label>
+        <label>
+        	Kim jesteś?
+        <select name="person" size="1">
+        	<option>Uczeń</option>
+        	<option>Nauczyciel</option>
+        	<option>Żaden z powyższych</option>
+        </select>
+        </label>
+        <label>
+        	Data urodzenia:
+        	<input name="birthday" type="date"/>
+        </label>
+        <p>Poziom rozwoju twojej matematyki:</p>
+        <fieldset>
+        	<legend>Poziomy</legend>
+	        <label>
+	        	<input name="level" type="radio"/>Podstawowy
+	        </label>
+	        <label>
+	        	<input name="level" type="radio"/>Średni
+	        </label>
+	        <label>
+	        	<input name="level" type="radio"/>Wysoki
+	        </label>
+        </fieldset>
+        <p>Ulubione zagadnienia matematyczne:</p>
+        <fieldset>
+        	<legend>Tematy</legend>
+	        <label>
+	        	<input name="topic" type="checkbox"/>Trygonometria
+	        </label>
+	        <label>
+	        	<input name="topic" type="checkbox"/>Algebra
+	        </label>
+	        <label>
+	        	<input name="topic" type="checkbox"/>Geometria
+	        </label>
+	       	<label>
+	        	<input name="topic" type="checkbox"/>Analiza funkcji
+	        </label>
+	      	<label>
+	        	<input name="topic" type="checkbox"/>Stereometria
+	        </label>
+	      	<label>
+	        	<input name="topic" type="checkbox"/>Kombinatoryka i prawdopodobieństwo
+	        </label>
+	        <label>
+	        	<input name="topic" type="checkbox"/>Statystyka
+	        </label>
+        </fieldset>
+    	<p>Opis profilu (to pole może być puste)</p>
+        <label>
+        	<textarea name="describtion" cols="50" rows="8" style="background-color: #444;resize: none; font-family: TruenoBold; color: #fff;"></textarea>
+        </label>
+        <input type="reset" value="Reset wartości"/>
+        <input type="submit" value="Wyślij" onclick="return checkForm();" />
+    </form>
+    <div id="result">
+    	<ul>
+    	</ul>
+    </div>   
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
